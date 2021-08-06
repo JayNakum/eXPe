@@ -22,12 +22,13 @@ class Expe with ChangeNotifier {
               DateTime.parse(xp['date']),
             ),
           )
-          .toList(),
+          .toList()
+          .reversed,
     );
   }
 
   void newExpense(Expense expe) {
-    _expe.insert(0, expe);
+    _expe.add(expe);
     notifyListeners();
     DBHelper.insert(
       'expenses',

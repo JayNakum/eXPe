@@ -70,9 +70,8 @@ class Expense extends StatelessWidget {
         delete(id);
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: const Text(
-              'Deleted',
-            ),
+            content: const Text('Deleted'),
+            duration: Duration(seconds: 1),
           ),
         );
       },
