@@ -22,9 +22,10 @@ class Expe with ChangeNotifier {
               DateTime.parse(xp['date']),
             ),
           )
-          .toList()
-          .reversed,
+          .toList(),
+      // .reversed,
     );
+    _expe.sort((a, b) => b.date.compareTo(a.date));
   }
 
   void newExpense(Expense expe) {
@@ -49,7 +50,13 @@ class Expe with ChangeNotifier {
     DBHelper.delete('expenses', id);
   }
 
-  double total() {
+  void deleteAll() {
+    _expe.clear();
+    notifyListeners();
+    DBHelper.drop();
+  }
+
+  double totalAll() {
     double _total = 0.0;
     _expe.forEach(
       (expense) {
@@ -58,4 +65,37 @@ class Expe with ChangeNotifier {
     );
     return _total;
   }
+
+  double totalMonth() {
+    double _total = 0.0;
+    _expe.forEach(
+      (expense) {
+        if (expense.date.month == DateTime.now().month)
+          _total = _total + expense.amount;
+      },
+    );
+    return _total;
+  }
+
+  // double totalWeek() {
+  //   double _total = 0.0;
+
+  //   _expe.forEach(
+  //     (expense) {
+  //       String date = DateTime.now().toString();
+  //       String firstDay = date.substring(0, 8) + '01' + date.substring(10);
+  //       int weekDay = DateTime.parse(firstDay).weekday;
+  //       // DateTime testDate = DateTime.now();
+  //       int weekOfMonth;
+  //       weekDay--;
+  //       weekOfMonth = ((DateTime.now().day + weekDay) / 7).ceil();
+  //       print('Week of the month: $weekOfMonth');
+  //       weekDay++;
+  //       // if (expense.date.weekday == 1) {
+  //       //   _total = _total + expense.amount;
+  //       // }
+  //     },
+  //   );
+  //   return _total;
+  // }
 }

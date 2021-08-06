@@ -40,7 +40,6 @@ class DBHelper {
 
   static Future<void> drop() async {
     final sqlDb = await DBHelper.database();
-    await sqlDb.execute('DROP TABLE expenses;');
-    await getData('expenses');
+    await sqlDb.execute('DELETE FROM expenses;');
   }
 }

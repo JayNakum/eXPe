@@ -31,6 +31,13 @@ class HomeScreen extends StatelessWidget {
       _expe.newExpense(_newExpe);
     }
 
+    // Future _refreshData() async {
+    //   // await Future.delayed(Duration(seconds: 3));
+    //   // _data.clear();
+    //   // _data.addAll(generateWordPairs().take(20));
+    //   setState(() {});
+    // }
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: FutureBuilder(
@@ -39,7 +46,7 @@ class HomeScreen extends StatelessWidget {
             snapshot.connectionState == ConnectionState.waiting
                 ? Center(child: CircularProgressIndicator())
                 : Consumer<Expe>(
-                    builder: (ctx, expe, ch) {
+                    builder: (ctx, expe, _) {
                       return Stack(
                         children: <Widget>[
                           TotalExpe(expe: expe),
@@ -50,7 +57,6 @@ class HomeScreen extends StatelessWidget {
                   ),
       ),
       floatingActionButton: FloatingActionButton(
-        // backgroundColor: Colors.cyan,
         onPressed: () {
           showModalBottomSheet(
             context: context,
