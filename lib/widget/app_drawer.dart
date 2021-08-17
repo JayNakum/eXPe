@@ -22,6 +22,23 @@ class AppDrawer extends StatelessWidget {
               style: const TextStyle(color: Colors.white),
             ),
           ),
+          // ListTile(
+          //   leading: const Icon(Icons.import_export_rounded),
+          //   title: const Text('Export Expenses'),
+          //   onTap: () {
+          //     // TODO: sqlitetoexcel
+          //     // _expe.export().then(
+          //     //   (path) {
+          //     //     ScaffoldMessenger.of(context).showSnackBar(
+          //     //       SnackBar(
+          //     //         content: Text(path),
+          //     //         duration: Duration(seconds: 1),
+          //     //       ),
+          //     //     );
+          //     //   },
+          //     // );
+          //   },
+          // ),
           ListTile(
             onTap: () {
               showDialog(
@@ -60,7 +77,7 @@ class AppDrawer extends StatelessWidget {
               const _website = 'https://JayNakum.github.io/';
               launch(_website);
             },
-          )
+          ),
         ],
       ),
     );

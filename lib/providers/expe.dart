@@ -1,4 +1,4 @@
-import 'package:expe/helpers/db_helper.dart';
+import 'package:expe/helpers/db_helper_sqlite.dart';
 import 'package:expe/models/expense.dart';
 import 'package:flutter/material.dart';
 
@@ -76,6 +76,11 @@ class Expe with ChangeNotifier {
     );
     return _total;
   }
+
+  // Future<String> export() async {
+  //   String filePath = await DBHelper.exportAll();
+  //   return filePath;
+  // }
 
   // double totalWeek() {
   //   double _total = 0.0;
