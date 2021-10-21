@@ -1,7 +1,7 @@
 # [Expe](https://github.com/JayNakum/Expe)
 #### Developed by [Jay Nakum](https://github.com/JayNakum).
-![Website](https://img.shields.io/website?down_message=Download&label=PlayStore&style=flat-square&up_message=Download&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dio.github.jaynakum.expe)
-![GitHub all releases](https://img.shields.io/github/downloads/JayNakum/Expe/total?style=flat-square)
+
+<a href='https://play.google.com/store/apps/details?id=io.github.jaynakum.expe&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
 
 
 This was my first ever application built in flutter. It is a simple app to keep track of your daily expenses.  
